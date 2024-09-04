@@ -1,0 +1,117 @@
+/*return policy css*/
+/*General Styles */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: -15vh;
+}
+
+.return-policy-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.return-policy-page h2 {
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.return-policy-page p {
+    margin-bottom: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .return-policy-page {
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    .return-policy-page p {
+        margin-bottom: 12px;
+    }
+
+    .return-policy-page h2 {
+        font-family: serif;
+    }
+}
+
+@media (max-width: 480px) {
+    .return-policy-page {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .return-policy-page p {
+        margin-bottom: 10px;
+    }
+
+    .return-policy-page h2 {
+        font-family: serif;
+    }
+}
+
+
+
+/*shipping policy css*/
+/* ShippingPolicy.css */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.shipping-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-page p {
+    margin-bottom: 15px;
+}
+
+.shipping-page h2 {
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    .shipping-page {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shipping-page {
+        padding: 10px;
+        font-size: 12px;
+    }
+}

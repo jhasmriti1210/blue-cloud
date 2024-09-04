@@ -1,0 +1,98 @@
+/* General Styling */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-page {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.contactform .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.contactform .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contactform textarea.form-control {
+    height: 120px;
+    resize: none;
+}
+
+.contactform .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: black;
+    /* Adjust this color to match your theme */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contactform .btn:hover {
+    background-color: black;
+    /* Adjust this color to match your theme */
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+    .contact-page {
+        padding: 10px;
+    }
+
+    .contactform .title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .contactform .form-control {
+        font-size: 0.9rem;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .contactform .btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (min-width:768px) {
+    .contactform {
+        width: 80vh;
+    }
+}
