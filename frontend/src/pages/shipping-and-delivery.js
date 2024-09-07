@@ -30,7 +30,7 @@ const ShippingPolicy = () => {
                 </div>
 
             </div>
-            <Footer />
+
         </Layout>
     );
 };

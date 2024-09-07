@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import Footer from "../components/Layout/Footer";
 import "../styles/testimonial.css";
-import { FaExternalLinkAlt } from 'react-icons/fa'; // Import the external link icon
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const testimonials = [
     {
@@ -46,7 +46,7 @@ const Testimonials = () => {
                         </div>
                     </div>
                 </div>
-                <Footer />
+
             </div>
         </Layout>
     );

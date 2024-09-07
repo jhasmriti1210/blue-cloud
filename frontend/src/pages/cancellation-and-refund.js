@@ -30,7 +30,7 @@ const ReturnPolicy = () => {
                 </div>
             </div>
 
-            <Footer />
+
 
         </Layout>
     );

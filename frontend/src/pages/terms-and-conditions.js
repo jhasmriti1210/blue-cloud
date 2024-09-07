@@ -268,7 +268,7 @@ const Termsandconditions = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+
         </Layout >
     );
 };

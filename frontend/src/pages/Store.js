@@ -372,7 +372,7 @@ const Store = () => {
             </div>
           </div>
         </div>
-        <Footer />
+
       </div>
     </Layout>
   );

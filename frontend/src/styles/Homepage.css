@@ -1,338 +1,140 @@
-/* Section 1 Styling */
-.section1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
+.image1 {
+    animation: floatImage 6s ease-in-out infinite;
 }
 
-/* Content on the left */
-.content-section1 {
-    margin-left: 10rem;
-    width: 50rem;
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-/* Image on the right */
-.image-section {
-    width: 30rem;
-    margin-right: -6rem;
-    box-shadow: #000;
-
-}
-
+/* Define the initial state of the book image */
 .book-image {
+    perspective: 400px;
     width: 250px;
     height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s ease;
+    margin-top: 6rem;
+    margin-right: -5rem;
 }
 
-.publishing-title {
-    font-size: 1.6rem;
-    margin-left: 1rem;
-    font-family: serif;
-    font-weight: bold;
-    color: black;
+/* Apply the rotation when hovering */
+.book-image:hover {
+    transform: rotateY(-40deg);
+    /* Rotate effect on hover */
 }
 
-.publishing-subtitle {
-    font-size: 2.5rem;
-    margin-left: 0.8rem;
-    font-family: serif;
-    font-weight: bold;
-}
-
-.publishing-subtitle1 {
-    font-size: 2.5rem;
-    margin-left: 0.8rem;
-    font-family: serif;
-    font-weight: bold;
-}
-
-.main {
-    color: darkblue;
-    font-weight: bold;
-}
-
-h3 .main1 {
-    margin-top: 1.5rem;
-    color: darkblue;
-}
-
-.head {
-    display: flex;
-    margin-left: 1rem;
-    margin-bottom: 2.5rem;
-}
-
-/* Media Queries */
-
-/* Extra small screens (max-width: 375px) */
-@media (max-width: 375px) {
-    .section1 {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
+/* Define the rotation animation (Remove if not needed) */
+@keyframes Animation {
+    0% {
+        transform: rotateY(0deg);
     }
 
-    .content-section1,
-    .image-section {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 1.5rem;
-    }
-
-    .publishing-title {
-        font-size: 1.2rem;
+    100% {
+        transform: rotateY(-40deg);
     }
 }
 
-/* Small screens (max-width: 480px) */
-@media (max-width: 480px) {
-    .section1 {
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem 0;
-        width: 100%;
-    }
-
-    .content-section1,
-    .image-section {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        margin-top: 1.5rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 1.8rem;
-    }
-
-    .publishing-title {
-        font-size: 1.4rem;
-    }
+/* Front cover of the book */
+.book-image> :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: darkblue;
+    width: 230px;
+    height: 300px;
+    transform: translateZ(25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 5px 5px 20px #666;
 }
 
-/* Small to Medium screens (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .section1 {
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 0;
-    }
-
-    .content-section1,
-    .image-section {
-        margin-left: 0;
-        margin-right: 0;
-        width: 90%;
-        margin-top: 2rem;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 2rem;
-    }
-
-    .publishing-title {
-        font-size: 1.6rem;
-    }
+/* Side of the book */
+.book-image::before {
+    position: absolute;
+    content: ' ';
+    background-color: blue;
+    left: 0;
+    top: 3px;
+    width: 48px;
+    height: 294px;
+    transform: translateX(172px) rotateY(90deg);
+    background: linear-gradient(90deg,
+            #fff 0%,
+            #f9f9f9 5%,
+            #fff 10%,
+            #f9f9f9 15%,
+            #fff 20%,
+            #f9f9f9 25%,
+            #fff 30%,
+            #f9f9f9 35%,
+            #fff 40%,
+            #f9f9f9 45%,
+            #fff 50%,
+            #f9f9f9 55%,
+            #fff 60%,
+            #f9f9f9 65%,
+            #fff 70%,
+            #f9f9f9 75%,
+            #fff 80%,
+            #f9f9f9 85%,
+            #fff 90%,
+            #f9f9f9 95%,
+            #fff 100%);
 }
 
-/* Medium screens (768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .section1 {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem 0;
-    }
-
-    .content-section1 {
-        margin-left: 5rem;
-        width: 45rem;
-        margin-top: 0;
-    }
-
-    .image-section {
-        width: 28rem;
-        margin-right: -4rem;
-        margin-top: 0;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 2.2rem;
-    }
-
-    .publishing-title {
-        font-size: 1.8rem;
-    }
+/* Back cover of the book */
+.book-image::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 200px;
+    height: 300px;
+    transform: translateZ(-25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: -10px 0 50px 10px #666;
 }
 
-/* Large screens (991px to 1024px) */
-@media (min-width: 991px) and (max-width: 1024px) {
-    .section1 {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2.5rem 0;
-    }
+/* Media Query to disable floating but allow rotation */
 
-    .content-section1 {
-        margin-left: 6rem;
-        width: 48rem;
-        margin-top: 0;
-    }
+.book-image {
+    perspective: none;
+    transform-style: flat;
+    margin-top: 2rem;
+    margin-right: 0;
 
-    .image-section {
-        width: 29rem;
-        margin-right: -5rem;
-        margin-top: 0;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 2.4rem;
-    }
-
-    .publishing-title {
-        font-size: 1.9rem;
-    }
 }
 
-/* Large screens (1025px to 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
-    .section1 {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 3rem 0;
-    }
-
-    .content-section1 {
-        margin-left: 8rem;
-        width: 50rem;
-        margin-top: 0;
-    }
-
-    .image-section {
-        width: 30rem;
-        margin-right: -6rem;
-        margin-top: 0;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 2.5rem;
-    }
-
-    .publishing-title {
-        font-size: 2rem;
-    }
-}
-
-/* Extra large screens (1201px to 1440px) */
-@media (min-width: 1201px) and (max-width: 1440px) {
-    .section1 {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 3.5rem 0;
-    }
-
-    .content-section1 {
-        margin-left: 10rem;
-        width: 52rem;
-        margin-top: 0;
-    }
-
-    .image-section {
-        width: 32rem;
-        margin-right: -6rem;
-        margin-top: 0;
-    }
-
-    .publishing-subtitle,
-    .publishing-subtitle1 {
-        font-size: 2.8rem;
-    }
-
-    .publishing-title {
-        font-size: 2.2rem;
-    }
+.book-image:hover {
+    transform: rotateY(-40deg);
+    /* Rotate effect on hover */
 }
 
 
 
 
-@media (min-width: 768px) {
 
+.scrollbar-hide {
+    overflow: -moz-scrollbars-none;
+    /* For Firefox */
+    scrollbar-width: none;
+    /* For Firefox */
+}
 
-    .content-section2 {
-        margin-left: 10rem;
-        width: 50rem;
-        margin-top: -23rem;
-
-
-    }
-
-
-    .p1,
-    .p2,
-    .p3 {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .icon {
-        width: 3rem;
-        height: 1.3rem;
-        color: black;
-    }
-
-    .icon2 {
-        width: 3rem;
-        height: 1.3rem;
-        color: black;
-        margin-left: 0.6rem;
-    }
-
-    .icon3 {
-        width: 3.3rem;
-        height: 1.5rem;
-        color: black;
-        margin-left: 1.1rem;
-    }
-
-    .content-section1,
-    .content-section2 {
-        border: none;
-    }
-
-
-
-    .section4 {
-        margin-top: -2rem;
-
-        height: 20rem;
-
-
-    }
-
-    .content-section4 {
-        width: 70rem;
-        margin-left: 12rem;
-    }
-
-    .ready {
-        font-size: 2.3rem;
-        font-family: serif;
-        font-weight: bolder;
-    }
-
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
 }

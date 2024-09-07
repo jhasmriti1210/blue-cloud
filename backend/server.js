@@ -1,4 +1,11 @@
 import express from "express";
+
+const app = express();
+// Define a route for GET //
+app.get('/', (req, res) => {
+  res.send('Welcome to the Home Page');
+});
+
 import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
@@ -13,8 +20,7 @@ dotenv.config();
 //database config
 connectDB();
 
-//rest object
-const app = express();
+
 
 //middlewares
 app.use(cors());
@@ -26,6 +32,9 @@ app.use("/api/v1/auth", authRoutes);
 app.use('/api/v1/category', categoryRoutes);
 app.use('/api/v1/product', productRoutes);
 app.use("/api/v1", contactRoutes);
+
+
+
 
 //PORT
 const PORT = process.env.PORT || 8082;
