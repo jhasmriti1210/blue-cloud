@@ -16,6 +16,12 @@
     }
 }
 
+@media (min-width: 768px) {
+    .md\:animate-floatImage {
+        animation: floatImage 6s ease-in-out infinite;
+    }
+}
+
 /* Define the initial state of the book image */
 .book-image {
     perspective: 400px;

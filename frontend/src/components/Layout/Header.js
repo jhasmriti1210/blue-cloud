@@ -76,7 +76,7 @@ const Header = () => {
                 <Link to="/store" className="md:text-xl">Stores</Link>
                 <Link to="/" className="md:text-xl">Packages</Link>
                 <Link to="/testimonial" className="md:text-xl">Testimonials</Link>
-                <Link to="/about-us" className="md:text-xl">About</Link>
+                <Link to="/about-us" className="md:text-xl">About Us</Link>
                 <Link to="/contact-us" className="md:text-xl">Contact Us</Link>
               </div>
             </div>
@@ -160,7 +160,7 @@ const Header = () => {
                 Testimonials
               </Link>
               <Link to="/about-us" className="text-xl" onClick={() => setIsMenuOpen(false)}>
-                About
+                About Us
               </Link>
               <Link to="/contact-us" className="text-xl" onClick={() => setIsMenuOpen(false)}>
                 Contact Us

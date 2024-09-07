@@ -17,9 +17,9 @@ const Footer = () => {
 
           {/* Content Section */}
           <div className="flex-1 p-6 bg-white bg-opacity-80 rounded-md flex flex-col items-center justify-center mb-4 md:mb-0 md:w-2/4 mx-5">
-            <h3 className="text-2xl font-inter font-bold text-black mb-2 text-center">Blue Cloud Publishers</h3>
+            <h3 className="text-lg md:text-2xl font-inter font-bold text-black mb-2 text-center">Blue Cloud Publishers</h3>
             <div className="w-40 mx-auto border-b-2 border-yellow-500 mb-8 rounded-lg"></div>
-            <p className="text-base font-inter text-black   max-w-prose">
+            <p className="text-base sm:text-base md:text-lg text-gray-600 leading-relaxed font-inter mb-4 md:max-w-prose">
               Blue Cloud Publishers stands as the premier hub for authors seeking to self-publish their books, blending exceptional services with cutting-edge technology. With our unwavering commitment to quality and innovation, BlueCloud Publishers emerges as the definitive choice for authors embarking on their independent publishing journey. Engage in insightful conversations with our team of publishing experts, tailor your perfect publishing strategy, and watch as your literary aspirations soar above the rest. Take the next step and discover the BlueCloud Publishers difference, where your publishing dreams become a captivating reality.
             </p>
           </div>
@@ -75,7 +75,8 @@ const Footer = () => {
 
         {/* Footer Links */}
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-10 space-y-2 md:space-y-0 text-center font-inter  items-center">
-          <p className="text-white text-base md:text-lg my-4 font-inter">© 2024 Blue Cloud Publishers. All rights reserved.</p>
+          <p className="text-white text-base md:text-lg my-4 font-inter">© 2024 Blue Cloud Publishers.</p>
+          <p className="text-white text-base md:text-lg my-4 font-inter">All Rights Reserved.</p>
           <p className="text-white text-base md:text-lg"><Link to='/privacy-policy'>Privacy Policy</Link></p>
           <p className="text-white text-base md:text-lg"><Link to='/terms-and-conditions'>Terms and Conditions</Link></p>
           <p className="text-white text-base md:text-lg"><Link to='/cancellation-and-refund'>Cancellation and Refund</Link></p>
