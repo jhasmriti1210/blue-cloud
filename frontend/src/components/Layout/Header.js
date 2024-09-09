@@ -29,14 +29,14 @@ const Header = () => {
       {/* Main Navbar */}
       <nav className="font-medium text-black bg-white h-20 shadow-md">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="flex justify-center items-center py-2 -mt-8 md:-mt-12">
+          <div className="flex justify-center items-center py-2 -mt-16 md:-mt-16">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/">
                 <img
                   src="../logo/logo1.png"
                   alt="Brand-logo"
-                  className="h-32 md:h-30 lg:h-40 w-auto "
+                  className="h-52 md:h-30 lg:h-48 w-auto"
                 />
               </Link>
             </div>
@@ -74,7 +74,7 @@ const Header = () => {
               <div className="hidden md:flex flex-grow justify-center space-x-8 items-center">
                 <Link to="/" className="md:text-xl">Home</Link>
                 <Link to="/store" className="md:text-xl">Stores</Link>
-                <Link to="/" className="md:text-xl">Packages</Link>
+                <Link to="/packages" className="md:text-xl">Packages</Link>
                 <Link to="/testimonial" className="md:text-xl">Testimonials</Link>
                 <Link to="/about-us" className="md:text-xl">About Us</Link>
                 <Link to="/contact-us" className="md:text-xl">Contact Us</Link>
@@ -153,7 +153,7 @@ const Header = () => {
               <Link to="/store" className="text-xl" onClick={() => setIsMenuOpen(false)}>
                 Stores
               </Link>
-              <Link to="/" className="text-xl" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/packages" className="text-xl" onClick={() => setIsMenuOpen(false)}>
                 Packages
               </Link>
               <Link to="/testimonial" className="text-xl" onClick={() => setIsMenuOpen(false)}>
@@ -170,12 +170,14 @@ const Header = () => {
                 {!auth.user ? (
                   <Link
                     to="/login"
-                    className="md:text-xl font-serif bg-white text-blue-900 px-4 py-2 rounded-lg border border-gray-200 font-bold"
+                    className={`md:text-xl font-serif text-blue-900 bg-white hover:bg-yellow-600 hover:text-white px-4 py-2 rounded-lg border border-gray-200 font-bold ${isHovered ? 'bg-yellow-600 text-white' : ''
+                      }`}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                   >
                     Login/Register
                   </Link>
+
                 ) : (
                   <div className="relative">
                     <button

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import Layout from "./../../components/Layout/Layout";
-import AdminMenu from "../../components/Layout/AdminMenu";
+import AdminMenu from "./../../components/Layout/AdminMenu";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
@@ -176,7 +176,4 @@ const CreateProduct = () => {
     </Layout>
   );
 };
-
-
-
 export default CreateProduct;

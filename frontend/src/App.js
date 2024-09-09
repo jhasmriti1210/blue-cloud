@@ -29,6 +29,7 @@ import Returnpolicy from "./pages/cancellation-and-refund";
 import Shippingpolicy from "./pages/shipping-and-delivery";
 import Termsandconditions from "./pages/terms-and-conditions";
 import Testimonials from "./pages/testimonials";
+import Packages from "./pages/packages";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
         <Route path="/shipping-and-delivery" element={<Shippingpolicy />} />
         <Route path="/terms-and-conditions" element={< Termsandconditions />} />
         <Route path="/testimonial" element={< Testimonials />} />
+        <Route path="/packages" element={< Packages />} />
       </Routes>
 
     </>

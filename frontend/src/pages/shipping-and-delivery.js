@@ -9,7 +9,7 @@ const ShippingPolicy = () => {
             <div className="app min-h-screen py-8 px-4 md:px-8 lg:px-16">
                 <div className="content max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
                     <div className="shipping-page">
-                        <h2 className="text-3xl font-bold mb-4 text-center text-gray-800">Our Shipping Policies</h2>
+                        <h2 className="text-3xl font-bold mb-4 text-center text-gray-800">Our Shipping & Delivery Policies</h2>
                         <p className="mb-4 text-lg text-gray-700">At Blue Cloud Publishers, we strive to ensure that your orders are processed and delivered to you in a timely manner. Please review our shipping and delivery policy below:</p>
                         <h3 className="text-xl font-bold mb-2 text-gray-800">Order Processing</h3>
                         <p className="mb-4 text-lg text-gray-700">
@@ -56,7 +56,7 @@ const ShippingPolicy = () => {
 
                         <h3 className="text-xl font-bold mb-2 text-gray-800">Customer Support</h3>
                         <p className="mb-4 text-lg text-gray-700">
-                            For any questions or concerns regarding your order, please contact our customer support team at <a href="mailto:Bluecloudpublishers@gmail.com" className="text-blue-600 hover:underline"> Bluecloudpublishers@gmail.com</a> or call us at 9999190496.
+                            For any questions or concerns regarding your order, please contact our customer support team at <a href="mailto:Bluecloudpublishers@gmail.com" className="text-blue-600 hover:underline"> Bluecloudpublishers@gmail.com</a> or call us at 6393878824.
                         </p>
                     </div>
                 </div>

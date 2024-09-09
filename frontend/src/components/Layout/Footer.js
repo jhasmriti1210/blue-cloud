@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
@@ -6,12 +6,93 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import amazonin from '../../images/amazon.in.png';
+import amazonkindle from '../../images/amazonkindle.png';
+import biblio from '../../images/biblio.png';
+import flipkart from '../../images/Flipkart.png';
+import googlebooks from '../../images/googlebooks.png';
+import payhip from '../../images/payhip.png';
+import paytmmall from '../../images/paytmmall.png';
+import snapdeal from '../../images/SnapDeal.png';
+import rakuten from '../../images/rakutenkobo.png';
+import amazonfr from '../../images/amazonfr.png';
+import '../../styles/Homepage.css';
 
 const Footer = () => {
-  return (
-    <div className=" min-h-screen">
 
-      {/* Eighth Section Start */}
+  useEffect(() => {
+    const sliderContent = document.getElementById('sliderContent');
+    if (!sliderContent) return;  // Check if element exists
+
+    const slides = sliderContent.children;
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    function showNextSlide() {
+      currentIndex++;
+      if (currentIndex = totalSlides) {
+        currentIndex = 0;  // Reset to the first slide
+      }
+      sliderContent.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Set the interval to automatically switch slides every 3 seconds
+    const interval = setInterval(showNextSlide, 3000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+
+
+
+
+
+  return (
+    <div className=" min-h-screen overflow-x-hidden">
+      <h3 className="text-black text-2xl md:text-4xl font-extrabold mb-6 relative z-10 font-inter flex justify-center items-center">
+        Our Selling Partners
+      </h3>
+      <div className="py-16 px-2 md:px-4 bg-gray-400 relative">
+
+        <div id="slider" className="scroll-container flex items-center justify-start h-auto space-x-4 md:space-x-12 relative overflow-hidden w-full">
+          <div id="sliderContent" className="scroll-content flex items-center space-x-8 md:space-x-32 transition-transform duration-700 ease-in-out">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={biblio} alt="Biblio" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={flipkart} alt="Flipkart" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={amazonin} alt="Amazon India" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={rakuten} alt="Rakuten" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={amazonkindle} alt="Amazon Kindle" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={googlebooks} alt="Google Books" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={snapdeal} alt="Snapdeal" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={amazonfr} alt="Amazon France" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={paytmmall} alt="Paytm Mall" className="w-full h-full object-contain" />
+            </div>
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-40 md:h-40 flex justify-center items-center">
+              <img src={payhip} alt="Payhip" className="w-full h-full object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {/* ninth Section Start */}
       <div className="py-16 px-4 md:px-6 relative">
         <div className="flex flex-col md:flex-row w-full max-w-screen-xl mx-auto space-y-4 md:space-y-0 md:space-x-4 ">
 
@@ -19,7 +100,7 @@ const Footer = () => {
           <div className="flex-1 p-6 bg-white bg-opacity-80 rounded-md flex flex-col items-center justify-center mb-4 md:mb-0 md:w-2/4 mx-5">
             <h3 className="text-lg md:text-2xl font-inter font-bold text-black mb-2 text-center">Blue Cloud Publishers</h3>
             <div className="w-40 mx-auto border-b-2 border-yellow-500 mb-8 rounded-lg"></div>
-            <p className="text-base sm:text-base md:text-lg text-gray-600 leading-relaxed font-inter mb-4 md:max-w-prose">
+            <p className="text-base sm:text-sm md:text-lg text-gray-600 leading-relaxed font-inter mb-4 md:max-w-prose">
               Blue Cloud Publishers stands as the premier hub for authors seeking to self-publish their books, blending exceptional services with cutting-edge technology. With our unwavering commitment to quality and innovation, BlueCloud Publishers emerges as the definitive choice for authors embarking on their independent publishing journey. Engage in insightful conversations with our team of publishing experts, tailor your perfect publishing strategy, and watch as your literary aspirations soar above the rest. Take the next step and discover the BlueCloud Publishers difference, where your publishing dreams become a captivating reality.
             </p>
           </div>
@@ -62,7 +143,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* Eighth Section End */}
+      {/* ninth Section End */}
 
       {/* footer Start */}
       <div className="py-4 px-4 flex flex-col md:flex-row w-full max-w-full mx-auto items-center justify-center bg-black mb-0">

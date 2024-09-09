@@ -144,3 +144,41 @@
     display: none;
     /* For Chrome, Safari, and Opera */
 }
+
+
+
+/*footer*/
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Container for scrolling */
+.scroll-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Content that scrolls */
+.scroll-content {
+    display: flex;
+    width: 300%;
+    animation: scroll 30s linear infinite;
+    /* Adjust timing as needed */
+}
+
+.scroll-content>div {
+    min-width: 32px;
+}
+
+
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}

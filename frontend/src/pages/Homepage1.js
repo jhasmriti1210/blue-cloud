@@ -4,9 +4,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Layout from "../components/Layout/Layout";
 import { FaExternalLinkAlt, FaWhatsapp } from "react-icons/fa";
 import royalty from '../images/royalty.png';
-import design from '../images/design.png';
 import expert from '../images/expert.png';
-import globally from '../images/globally.jpg';
+import globally from '../images/globally.avif';
+import skilled from '../images/skilled.png';
 import circle from '../images/circle.png';
 import page from '../images/page.png';
 import story from '../images/story.png';
@@ -14,6 +14,7 @@ import update from '../images/update.png';
 import trophy from '../images/trophy.png';
 import girl from '../images/girl.png';
 import bg from '../images/bg2.png';
+import home from "../images/home.png"
 import { FaBookOpen, FaArchway, FaBook, FaCalendarCheck, FaHandshake } from "react-icons/fa";
 import { MdAddLocation } from "react-icons/md";
 import "../styles/Homepage.css";
@@ -21,117 +22,119 @@ import "../styles/Homepage.css";
 
 
 const HomePage = () => {
-    const [auth, setAuth] = useAuth();
 
-    function scrollLeft() {
-        const testimonials = document.querySelector('.flex');
-        testimonials.scrollBy({
-            left: -300, // Adjust the scroll amount as needed
-            behavior: 'smooth',
-        });
-    }
 
-    function scrollRight() {
-        const testimonials = document.querySelector('.flex');
-        testimonials.scrollBy({
-            left: 300,
-            behavior: 'smooth',
-        });
-    }
 
 
     return (
         <Layout>
             <div>
-                <div className="min-h-screen justify-center">
+                <div className="min-h-screen justify-center overflow-x-hidden">
 
                     {/* First Section start */}
                     <div className="flex flex-col md:flex-row container px-4 py-3 md:py-28 mx-auto">
 
-                        {/* content section  */}
-                        <div className="flex flex-col md:flex-col md:items-center md:w-8/12 lg:w-6/12 md:ml-12 lg:ml-16 mt-16">
+                        {/* Content Section */}
+                        <div className="flex flex-col md:flex-col md:items-center md:w-8/12 lg:w-6/12 md:ml-12 lg:ml-16 mt-4 md:mt-16">
 
-                            <div className="flex flex-col items-center md:items-start">
-                                <strong className="text-xl md:text-2xl text-black font-inter md:text-white lg:font-bold py-2 md:py-4 md:ml-12 md:font-serif text-center md:text-start">
+                            <div className="flex flex-col items-center md:items-start md:-ml-48">
+                                <strong className="text-xl md:text-2xl text-black font-inter md:text-white lg:font-bold py-2 md:py-4 md:font-serif text-center md:text-start">
                                     Publishing Made Easy!
                                 </strong>
-                                <h3 className="text-2xl md:text-3xl text-black md:text-white font-bold mt-3 md:mt-6 md:ml-12 font-serif text-center md:text-start">
-                                    Publish your best seller at affordable prices
+                                <h3 className="text-2xl md:text-3xl text-black md:text-white font-bold mt-3 md:mt-6 font-serif text-center md:text-start">
+                                    Publish your best seller at
                                 </h3>
-                                <h3 className="text-xl md:text-3xl text-blue-800 md:ml-12 font-bold mt-1 md:mt-2 font-serif text-center md:text-start">
+                                <h3 className="text-2xl md:text-3xl text-black md:text-white font-bold mb-3 font-serif text-center md:text-start">
+                                    affordable prices in 3 days
+                                </h3>
+                                <h3 className="text-xl md:text-3xl text-blue-800 font-bold font-serif text-center md:text-start">
                                     Your Words || We Decorate
-
                                 </h3>
-                                <h3 className="text-xl md:text-3xl text-blue-800 md:ml-12 font-bold mt-1 font-serif">
+                                <h3 className="text-xl md:text-3xl text-blue-800 font-bold font-serif">
                                     We Publish || You Earn
                                 </h3>
                             </div>
 
+                            {/* Small screen image */}
+                            <img
+                                className="block md:hidden relative w-full object-cover mt-5 md:mt-16"
+                                src={home}
+                                alt="Small screen book cover"
+                            />
+
                             <div className="container px-4 py-12 md:py-1 mx-auto">
                                 <div className="flex flex-col md:flex-row md:items-center">
-                                    <div className="md:w-9/12 lg:w-11/12 flex flex-col items-start md:mt-6 md:ml-12">
-                                        <p className="text-sm md:text-base mb-3 text-center md:text-start md:mt-4 font-inter md:-ml-3 text-gray-600">
-                                            Turn your ideas into professional quality books, magazines, or ebooks.
+                                    <div className="flex flex-col items-center md:items-start md:w-9/12 lg:w-11/12 -mt-11 md:mt-6 md:ml-12">
+                                        <div className='flex flex-col md:flex-row md:items-center gap-4 text-center md:text-left'>
+                                            <Link to="/packages" className="bg-yellow-500 text-white py-3 px-4 rounded w-40 text-sm font-bold mx-auto md:mx-0 -ml-4">Start Publishing</Link>
+                                            <p className="text-xs md:text-base mb-1 font-inter text-gray-600 md:-mt-6 md:ml-1">
+                                                Turn your ideas into professional quality books,
+                                            </p>
+                                        </div>
+                                        <p className="text-xs md:text-base text-center font-inter text-gray-600 md:ml-48 md:text-left md:-mt-7 ">
+                                            magazines, or ebooks.
                                         </p>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:-ml-5 font-inter">
-                                            <div className="flex flex-row items-center p-2  gap-3">
-                                                <FaBookOpen className="text-gray-500 text-xl md:text-3xl" />
-                                                <p className="font-black lg:text-base">1k+ Books Published</p>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:-ml-5 font-inter text-center md:text-left">
+                                            <div className="flex flex-row items-center p-2 gap-3 justify-center md:justify-start">
+                                                <FaBookOpen className="text-3xl md:text-3xl lg:text-2xl text-gray-500" />
+                                                <p className="lg:text-base">1k+ Books Published</p>
                                             </div>
                                             <div className="hidden md:flex flex-row items-center p-4 md:-ml-3 rounded-lg gap-3">
-                                                <FaArchway className="text-gray-500 text-3xl" />
-                                                <p className="font-black lg:text-base">50k+ Community</p>
+                                                <FaArchway className="text-3xl md:text-3xl lg:text-2xl text-gray-500" />
+                                                <p className="lg:text-base">50k+ Community</p>
                                             </div>
-                                            <div className="flex flex-row items-center p-4 rounded-lg md:-ml-3 gap-3">
-                                                <FaBook className="text-gray-500 text-3xl" />
-                                                <p className=" font-black lg:text-base">5k+ Authors</p>
+                                            <div className="flex flex-row items-center p-4 rounded-lg gap-3 justify-center md:justify-start">
+                                                <FaBook className="text-3xl md:text-3xl lg:text-2xl text-gray-500" />
+                                                <p className="lg:text-base">5k+ Authors</p>
                                             </div>
                                         </div>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:-mt-8 md:-ml-8 font-inter">
-                                            <div className="flex flex-row items-center p-6 rounded-lg gap-2">
-                                                <FaCalendarCheck className="text-gray-500 text-3xl" />
-                                                <p className="font-black md:text-base md:ml-3">8+ Years Experience</p>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:-mt-8 md:-ml-8 font-inter text-center md:text-left ">
+                                            <div className="hidden md:flex flex-row items-center p-6 rounded-lg gap-2 justify-center md:justify-start">
+                                                <FaCalendarCheck className="text-3xl md:text-3xl lg:text-2xl text-gray-500" />
+                                                <p className="md:text-base md:ml-3">2+ Years Experience</p>
                                             </div>
-                                            <div className="flex flex-row items-center p-6 rounded-lg gap-2">
-                                                <FaHandshake className="text-gray-500 text-3xl" />
-                                                <p className="font-black md:text-base md:ml-3">50+ Members</p>
+                                            <div className="flex flex-row items-center p-6 rounded-lg gap-2 justify-center md:justify-start">
+                                                <FaHandshake className="text-4xl md:text-3xl lg:text-2xl text-gray-500 -ml-3 md:ml-1" />
+                                                <p className="md:text-base md:ml-3">50+ Members</p>
                                             </div>
-                                            <div className="hidden md:flex flex-row items-center p-6 rounded-lg gap-2">
-                                                <MdAddLocation className="text-gray-500 text-3xl" />
-                                                <p className="font-black md:text-base md:ml-3">3 Locations</p>
+                                            <div className="flex flex-row items-center p-6 rounded-lg gap-2 justify-center md:justify-start">
+                                                <MdAddLocation className="text-4xl md:text-3xl lg:text-2xl text-gray-500 -ml-3 md:ml-4" />
+                                                <p className="md:text-base md:ml-3">3 Locations</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
-                        {/* Image Column (Right Side on Large Screens) */}
-                        <div className="relative hidden md:block md:w-4/12 mt-16">
+                        {/* Image Section */}
+                        <div className="relative w-full md:w-4/12 mt-4 md:mt-32 flex-shrink-0">
                             {/* Background gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-blue-800 to-blue-950 w-full  md:w-[75%] md:h-[90%] -top-2 md:ml-32"></div>
+                            <div className="absolute hidden md:block inset-0 bg-gradient-to-b from-blue-800 to-blue-950 w-full md:w-[75%] md:h-[80%] -top-2 md:ml-32"></div>
 
-                            {/* Image */}
+                            {/* Large screen image */}
                             <img
-                                className="relative w-48 h-64 md:w-96 md:h-80 lg:w-96 lg:h-auto object-cover mt-5 md:ml-20 book-image "
+                                className="hidden md:block relative w-48 h-64 md:w-96 md:h-80 lg:w-96 lg:h-auto object-cover mt-20 md:mt-16 md:ml-20 book-image"
                                 src={story}
                                 alt="Book cover"
                             />
+
+
                         </div>
                     </div>
                     {/* First Section end */}
 
 
+
                     {/* Second Section start */}
-                    <div className="py-2 md:py-16 px-2 md:px-8">
+                    <div className="py-6 md:py-16 px-2 md:px-8 ">
                         <div className="container mx-auto">
                             <div className="flex flex-col  items-center text-center">
                                 <div className="max-w-full md:max-w-3/12 font-inter">
-                                    <h3 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
+                                    <h3 className="text-lg md:text-5xl font-bold text-gray-900 mb-4 -mt-16 md:mt-2">
                                         We are ranked the best book publishers
                                     </h3>
-                                    <h3 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
+                                    <h3 className="text-lg md:text-5xl font-bold text-gray-900 -mt-4 mb-4">
                                         in India for a reason.
                                     </h3>
 
@@ -187,7 +190,7 @@ const HomePage = () => {
                                             />
                                             <button
                                                 type="submit"
-                                                className="custom-button bg-yellow-700 text-black py-2 px-4 rounded-3xl w-full lg:w-full"
+                                                className="custom-button bg-yellow-500 text-black py-2 px-4 rounded-3xl w-full lg:w-full"
                                             >
                                                 Publish Your Book
                                             </button>
@@ -228,7 +231,7 @@ const HomePage = () => {
                                     <p className="mb-4 text-xl md:text-2xl lg:text-2xl text-center md:text-left">Let our skilled team handle your book's formatting, beautification, and cover design with precision and creativity.</p>
                                 </div>
                                 <div className="w-full md:w-5/12 lg:w-3/12">
-                                    <img src={design} alt="design-img" className="w-full md:animate-floatImage" />
+                                    <img src={skilled} alt="design-img" className="w-full md:animate-floatImage" />
                                 </div>
                             </div>
 
@@ -420,8 +423,12 @@ const HomePage = () => {
 
 
 
+
+
+
                 </div>
             </div>
+
 
 
         </Layout >
