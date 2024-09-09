@@ -25,9 +25,9 @@ const Layout = ({ children, title, description, keywords, author }) => {
   );
 };
 Layout.defaultProps = {
-  title: "Blue Cloud Publishers",
+  title: "Open Book Publishers",
   description: "mern stack app",
   keywords: "books,ebooks,audiobooks",
-  author: "Blue Cloud",
+  author: "Open Book",
 };
 export default Layout;

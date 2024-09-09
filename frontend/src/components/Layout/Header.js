@@ -29,14 +29,14 @@ const Header = () => {
       {/* Main Navbar */}
       <nav className="font-medium text-black bg-white h-20 shadow-md">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="flex justify-center items-center py-2 -mt-16 md:-mt-16">
+          <div className="flex justify-center items-center py-2 -mt-16 md:-mt-8">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/">
                 <img
                   src="../logo/logo1.png"
                   alt="Brand-logo"
-                  className="h-52 md:h-30 lg:h-48 w-auto"
+                  className="h-44 md:h-28 lg:h-32 w-auto"
                 />
               </Link>
             </div>

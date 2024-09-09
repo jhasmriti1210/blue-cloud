@@ -11,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <Layout title={"About - Blue cloud Publishers"}>
+    <Layout title={"About - Open Book Publishers"}>
 
       <div className="flex flex-col min-h-screen w-full">
         <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-8 p-4 sm:p-6 md:p-8 lg:p-10 w-full">
