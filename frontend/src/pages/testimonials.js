@@ -24,7 +24,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <Layout title={"Testimonials - Bluecloud Publishers"}>
+        <Layout title={"Testimonials - Open Book Publishers"}>
             <div className="app">
                 <div className="content">
                     <div className="terms-container">
