@@ -3738,3 +3738,20 @@ System.Threading.Channels.ChannelClosedException: The channel has been closed.
 2024-09-17 12:00:17.698 +05:30 [VRB] Converting params for Notification exit to OmniSharp.Extensions.LanguageServer.Protocol.Models.ExitParams
 2024-09-19 03:19:10.329 +05:30 [INF] This only goes file...
 2024-09-19 03:19:11.025 +05:30 [INF] Foo
+2024-09-19 03:19:12.752 +05:30 [DBG] Finding descriptors for initialize
+2024-09-19 03:19:13.056 +05:30 [DBG] Queueing "Serial":initialize:0 request for processing
+2024-09-19 03:19:13.081 +05:30 [DBG] Starting: Processing request initialize 0
+2024-09-19 03:19:13.084 +05:30 [DBG] Starting: Routing Request (0) initialize
+2024-09-19 03:19:13.089 +05:30 [VRB] Converting params for Request (0) initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2024-09-19 03:19:13.090 +05:30 [VRB] Converting params for Notification initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2024-09-19 03:19:13.557 +05:30 [VRB] Response value was OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializeResult
+2024-09-19 03:19:13.567 +05:30 [DBG] Finished: Routing Request (0) initialize in 482ms
+2024-09-19 03:19:13.568 +05:30 [DBG] Finished: Processing request initialize 0 in 485ms
+2024-09-19 03:19:15.801 +05:30 [DBG] Finding descriptors for initialized
+2024-09-19 03:19:15.807 +05:30 [DBG] Queueing "Serial":initialized request for processing
+2024-09-19 03:19:15.816 +05:30 [DBG] Starting: Processing notification initialized
+2024-09-19 03:19:15.817 +05:30 [DBG] Starting: Routing Notification initialized
+2024-09-19 03:19:15.817 +05:30 [VRB] Converting params for Notification initialized to OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializedParams
+2024-09-19 03:19:15.856 +05:30 [WRN] No ConfigurationItems have been defined, configuration won't surface any configuration from the client!
+2024-09-19 03:19:15.926 +05:30 [DBG] Finished: Routing Notification initialized in 108ms
+2024-09-19 03:19:15.927 +05:30 [DBG] Finished: Processing notification initialized in 110ms
