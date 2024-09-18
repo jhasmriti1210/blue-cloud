@@ -13,7 +13,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8082/api/v1/contact", {
+      const res = await axios.post("https://open-book-backend.onrender.com/api/v1/contact", {
         name,
         email,
         phone,
